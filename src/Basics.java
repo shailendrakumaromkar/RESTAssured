@@ -24,7 +24,7 @@ public class Basics {
 		System.out.println(placeId);
 		
 		
-		//update
+		//update method
 		given().log().all().queryParam("key", "qaclick123").header("Content-Type", "application/json")
 		.body("{\r\n"
 				+ "\"place_id\":\""+placeId+"\",\r\n"
@@ -34,6 +34,12 @@ public class Basics {
 		.when().put("maps/api/place/update/json")
 		.then().assertThat().log().all().statusCode(200).body("msg",equalTo("Address successfully updated"));
 		
+		
+		//get Place
+		
+		given().log().all().queryParam("key", "qaclick123").queryParam("place_id", placeId)
+		.when().get("maps/api/place/get/json")
+		.then().assertThat().statusCode(200);
 	}
 
 }

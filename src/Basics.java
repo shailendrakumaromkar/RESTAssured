@@ -24,7 +24,7 @@ public class Basics {
 		System.out.println(placeId);
 		
 		
-		//update method
+		//update method test
 		given().log().all().queryParam("key", "qaclick123").header("Content-Type", "application/json")
 		.body("{\r\n"
 				+ "\"place_id\":\""+placeId+"\",\r\n"

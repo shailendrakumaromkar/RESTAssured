@@ -11,6 +11,7 @@ public class Basics {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		//URL
 		RestAssured.baseURI= "https://rahulshettyacademy.com/";
 		String response = given().log().all().queryParam("key", "qaclick123").header("Content-Type","application/json")
 		.body(payload.AddPlace())

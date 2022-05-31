@@ -40,7 +40,7 @@ public class Basics {
 		
 		given().log().all().queryParam("key", "qaclick123").queryParam("place_id", placeId)
 		.when().get("maps/api/place/get/json")
-		.then().assertThat().statusCode(200);
+		.then().assertThat().log().all().statusCode(200);
 	}
 
 }

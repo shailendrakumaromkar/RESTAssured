@@ -40,7 +40,7 @@ public class Basics {
 		.then().assertThat().log().all().statusCode(200).body("msg",equalTo("Address successfully updated"));
 		
 		
-		//get Place test
+		//get Place tests
 		
 		String getPlaceResponse = given().log().all().queryParam("key", "qaclick123").queryParam("place_id", placeId)
 		.when().get("maps/api/place/get/json")
